@@ -1,0 +1,4 @@
+- delete div
+- create window and attach div this window
+- zoom div
+  - adjust width / height

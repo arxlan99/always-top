@@ -1,0 +1,12 @@
+.zoom-in__cursor {
+  cursor: zoom-in;
+  
+}
+
+.pointer__cursor {
+  cursor: pointer;
+}
+
+.ne-resize__cursor {
+  cursor: ne-resize;
+}
