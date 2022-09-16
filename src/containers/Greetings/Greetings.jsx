@@ -4,6 +4,8 @@ import './Greetings.css';
 import Delete from '../../assets/delete.svg';
 import Select from '../../assets/select.svg';
 import Zoom from '../../assets/zoom.svg';
+import Cancel from '../../assets/cancel.svg';
+
 import { useEffect } from 'react';
 import { createRef } from 'react';
 import { sendMessageToContentScript } from '../../pages/Background';
@@ -41,6 +43,7 @@ const GreetingComponent = () => {
     <div className="container">
       <div>
         <div className="header">Always Top</div>
+
         <div className="content">
           <div className="button_container">
             <button
@@ -59,8 +62,10 @@ const GreetingComponent = () => {
               <img src={Select} alt="" width={15} />
               <span>Select element and open new screen</span>
             </button>
+          </div>
+          <div className="button_container">
             <button className="button" onClick={() => handleCancel()}>
-              <img src={Select} alt="" width={15} />
+              <img src={Cancel} alt="" width={15} />
               <span>Cancel</span>
             </button>
           </div>
