@@ -1,5 +1,4 @@
 const handleDelete = (e) => {
-  console.log('deleted click');
   // prevent all clicks on the page
   e.preventDefault();
   e.stopPropagation();
@@ -7,18 +6,15 @@ const handleDelete = (e) => {
 };
 
 const handleFocus = (e) => {
-  console.log('focus click');
-
   // prevent all clicks on the page
   e.preventDefault();
   e.stopPropagation();
   // add close button
 
-  e.target.classList.add('modal');
+  e.target.classList.toggle('modal');
 };
 
 const handleCreateNewWindow = (e) => {
-  console.log('createNewWindow click');
   // prevent all clicks on the page
   e.preventDefault();
   e.stopPropagation();
@@ -52,7 +48,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 
     document.addEventListener('click', handleCreateNewWindow);
   } else if (msg === 'cancel') {
-    console.log('cancel');
     document.body.classList.remove(
       'zoom-in__cursor',
       'pointer__cursor',
