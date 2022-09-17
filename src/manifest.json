@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Chrome Extension with React & Webpack",
-  "description": "A chrome extension boilerplate built with React 17, Webpack 5, and Webpack Dev Server 4",
+  "name": "Delete, Zoom, Focus Screen Elements",
+  "description": "Delete, Zoom, Focus Screen Elements Easily with this Extension",
   "options_page": "options.html",
   "background": { "service_worker": "background.bundle.js" },
   "action": {
@@ -11,7 +11,7 @@
   "icons": {
     "128": "icon-128.png"
   },
-  "permissions": ["tabs", "bookmarks", "unlimitedStorage"],
+  "permissions": ["tabs"],
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*", "<all_urls>"],
