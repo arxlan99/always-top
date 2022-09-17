@@ -31,20 +31,15 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     document.body.classList.remove('zoom-in__cursor', 'ne-resize__cursor');
     document.body.classList.add('pointer__cursor');
 
-    createNotification(msg);
-
     document.addEventListener('click', handleDelete);
   } else if (msg === 'focus') {
     document.body.classList.remove('pointer__cursor', 'ne-resize__cursor');
     document.body.classList.add('zoom-in__cursor');
 
-    createNotification(msg);
     document.addEventListener('click', handleFocus);
   } else if (msg === 'createNewWindow') {
     document.body.classList.remove('zoom-in__cursor', 'pointer__cursor');
     document.body.classList.add('ne-resize__cursor');
-
-    createNotification(msg);
 
     document.addEventListener('click', handleCreateNewWindow);
   } else if (msg === 'cancel') {
@@ -57,7 +52,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 });
 
 // create notification
-function createNotification(text) {
+/* function createNotification(text) {
   Notification.requestPermission().then(function (result) {
     if (result === 'granted') {
       new Notification('Top Always', {
@@ -66,3 +61,4 @@ function createNotification(text) {
     }
   });
 }
+ */
